@@ -1,0 +1,49 @@
+{
+    "mcpServers": {
+      "Salesforce DX": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@salesforce/mcp",
+          "--orgs",
+          "boc-sbox",
+          "--toolsets",
+          "all"
+        ]
+      },
+      "git": {
+        "command": "uvx",
+        "args": [
+          "mcp-server-git"
+        ],
+        "env": {}
+      },
+      "atlassian-mcp-server": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "mcp-remote",
+          "https://mcp.atlassian.com/v1/sse"
+        ],
+        "env": {},
+        "disabledTools": [
+          "getConfluenceSpaces",
+          "getConfluencePage",
+          "getPagesInConfluenceSpace",
+          "getConfluencePageAncestors",
+          "getConfluencePageFooterComments",
+          "getConfluencePageInlineComments",
+          "getConfluencePageDescendants",
+          "createConfluencePage",
+          "updateConfluencePage",
+          "createConfluenceFooterComment",
+          "createConfluenceInlineComment",
+          "searchConfluenceUsingCql"
+        ]
+      },
+        "playwright-mcp": {
+          "command": "npx",
+          "args": ["@playwright/mcp@latest"]
+        }
+    }
+  } 
