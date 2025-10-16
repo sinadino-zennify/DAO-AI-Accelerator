@@ -10,16 +10,18 @@
 
 ## 🎯 What is This?
 
-**DAO-AI-Accelerator** is a comprehensive starter template for building deposit account opening integrations on Salesforce Financial Services Cloud (FSC). It includes:
+**DAO-AI-Accelerator** is a comprehensive starter template for building deposit account opening solutions on Salesforce Financial Services Cloud (FSC). It provides:
 
+✅ **LWC-based user screens** for guided deposit account opening workflows  
+✅ **Apex backend services** for business logic and data validation  
 ✅ **Complete data model** with FSC objects + custom extensions  
+✅ **Screen-by-screen user journey** from application to funding  
 ✅ **Field mapping framework** (CSV + documentation)  
-✅ **REST API patterns** for external application integration  
+✅ **REST API patterns** for optional external application integration  
 ✅ **Custom objects** for collateral, assessments, and due diligence  
 ✅ **AI agent rules** optimized for DAO projects  
 ✅ **Documentation templates** for requirements, ADRs, workflows  
 ✅ **Interactive setup script** for quick project initialization  
-✅ **Postman collection** for API testing  
 ✅ **Reference implementation** (ZiFi project example)
 
 ---
@@ -77,13 +79,25 @@ DAO-AI-Accelerator/
 ├── docs/                           # All documentation
 │   ├── 01-foundation/              # Data model, field mappings
 │   ├── 02-requirements/            # User stories, backlog
-│   ├── 03-workflows/               # External app workflows
-│   ├── 04-implementation/          # ADRs, session notes, API docs
+│   ├── 03-workflows/               # User workflows, external app workflows
+│   ├── 04-implementation/          # ADRs, session notes, LWC architecture
 │   └── 05-analysis/                # Analysis reports
 │
 ├── force-app/                      # Salesforce metadata
 │   └── main/default/
-│       ├── classes/patterns/       # Code pattern documentation
+│       ├── lwc/                    # Lightning Web Components
+│       │   ├── daoApplicationFlow/ # Multi-step application flow
+│       │   ├── applicantDetails/   # Applicant information screens
+│       │   ├── productSelection/   # Product selection interface
+│       │   ├── collateralEntry/    # Collateral information entry
+│       │   ├── reviewAndSubmit/    # Final review screen
+│       │   └── applicationStatus/  # Status tracking dashboard
+│       ├── classes/                # Apex classes
+│       │   ├── DAOApplicationService.cls
+│       │   ├── DAOValidationService.cls
+│       │   ├── DAOWorkflowService.cls
+│       │   ├── DAOProductService.cls
+│       │   └── patterns/           # Code pattern documentation
 │       └── objects/                # Custom objects
 │           ├── Assigned_Products__c/
 │           ├── Collateral__c/
@@ -107,6 +121,17 @@ DAO-AI-Accelerator/
 ├── init-dao-project.sh            # Interactive setup script
 └── package.xml                     # Salesforce deployment manifest
 ```
+
+### ⚡ LWC Components Included
+
+| Component | Purpose | User Journey Step |
+|-----------|---------|-------------------|
+| **daoApplicationFlow** | Multi-step application container with navigation | Main workflow orchestrator |
+| **applicantDetails** | Applicant information entry and validation | Step 1: Applicant Info |
+| **productSelection** | Product selection interface with recommendations | Step 2: Product Choice |
+| **collateralEntry** | Collateral information and documentation | Step 3: Collateral Details |
+| **reviewAndSubmit** | Final review and submission confirmation | Step 4: Review & Submit |
+| **applicationStatus** | Status tracking and progress dashboard | Ongoing: Status Monitoring |
 
 ### 🏗️ Custom Objects Included
 
@@ -185,11 +210,13 @@ This accelerator is designed for AI-assisted development with:
 ## 📖 Use Cases
 
 Perfect for:
-- 💰 Deposit account opening integrations
-- 🏦 Business banking applications
-- 👤 Multi-applicant account setups
-- 🔐 Compliance-heavy financial services
-- 🔄 External app → Salesforce data sync
+- 💰 **Guided deposit account opening** with step-by-step LWC screens
+- 🏦 **Business banking applications** with intuitive user interfaces
+- 👤 **Multi-applicant account setups** with collaborative workflows
+- 🔐 **Compliance-heavy financial services** with built-in validation
+- 🔄 **Optional external app integration** for data synchronization
+- 📱 **Self-service customer portals** for account opening
+- 🏢 **Bank staff workflows** for assisted account opening
 
 ---
 

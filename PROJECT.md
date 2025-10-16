@@ -9,13 +9,14 @@
 
 ## 🎯 Project Objective
 
-Implement a Salesforce Financial Services Cloud (FSC) integration for deposit account opening via {{INTEGRATION_SOURCE}} external application.
+Build LWC-based screens and supporting backend infrastructure to guide Salesforce users through the complete deposit account opening process.
 
 **Phase 1 Goals**:
 - ✅ Define data model and object relationships
-- ⏳ Map {{INTEGRATION_SOURCE}} fields to Salesforce
-- ⏳ Build REST API endpoint
-- ⏳ Implement data ingestion
+- ⏳ Create LWC components for user workflows
+- ⏳ Build Apex services for business logic
+- ⏳ Implement screen-by-screen user journey
+- ⏳ Optional: Build REST API for external integration
 - ⏳ Deploy to {{ORG_ALIAS}}
 
 ---
@@ -27,13 +28,14 @@ Implement a Salesforce Financial Services Cloud (FSC) integration for deposit ac
 **End Date**: YYYY-MM-DD
 
 ### Sprint Goals
-- [ ] Complete field mappings
+- [ ] Complete LWC component structure
 - [ ] Deploy custom objects
-- [ ] Implement API endpoint
+- [ ] Build core Apex services
 
 ### In Progress
+- [ ] [LWC-001] Create application flow container
+- [ ] [SVC-001] Build DAOApplicationService
 - [ ] [DM-001] Data model definition
-- [ ] [MAP-001] Field mappings
 
 ### Completed This Sprint
 - [x] Project setup
@@ -46,15 +48,17 @@ Implement a Salesforce Financial Services Cloud (FSC) integration for deposit ac
 See `/docs/02-requirements/backlog.md` for complete backlog.
 
 **High Priority**:
+- LWC component development
+- Apex service implementation
 - Data model completion
-- Field mapping validation
-- API endpoint implementation
 
 **Medium Priority**:
+- Field mapping validation
 - Testing framework
 - Security implementation
 
 **Low Priority**:
+- External API integration
 - Automation workflows
 - Reporting
 

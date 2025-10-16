@@ -29,5 +29,21 @@
         <members>Collateral_Assessment__c.Assessor__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>DAOApplicationService</members>
+        <members>DAOValidationService</members>
+        <members>DAOWorkflowService</members>
+        <members>DAOProductService</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>daoApplicationFlow</members>
+        <members>applicantDetails</members>
+        <members>productSelection</members>
+        <members>collateralEntry</members>
+        <members>reviewAndSubmit</members>
+        <members>applicationStatus</members>
+        <name>LightningComponentBundle</name>
+    </types>
     <version>65.0</version>
 </Package>

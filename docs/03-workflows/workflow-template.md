@@ -14,7 +14,11 @@
 
 ## 🎯 Overview
 
-This document outlines the [workflow name] process as implemented in the {{INTEGRATION_SOURCE}} external application.
+This document outlines the [workflow name] process. Choose the appropriate workflow type:
+
+**For Salesforce Users**: See `/docs/03-workflows/salesforce-user-workflow.md` for the complete LWC-based user journey within Salesforce.
+
+**For External Integration**: This template documents the external application workflow for {{INTEGRATION_SOURCE}} integration.
 
 **User Type**: [Sole Proprietor / Business Entity / Individual]  
 **Estimated Time**: [X minutes]  
@@ -80,6 +84,12 @@ sequenceDiagram
 ## 📊 Field Mapping Reference
 
 See `/docs/01-foundation/field-mappings.csv` for complete mappings.
+
+## 🔄 Salesforce Integration
+
+**For LWC-based workflows**: See `/docs/03-workflows/salesforce-user-workflow.md` for the complete Salesforce user experience.
+
+**For external API integration**: Use the field mappings below to integrate external application data with Salesforce objects.
 
 ---
 

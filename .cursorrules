@@ -8,15 +8,16 @@
 
 ## 🎯 Project Objective (Phase 1)
 
-**Goal**: Implement supporting standard and custom objects to augment Salesforce Financial Services Cloud (FSC) for {{INTEGRATION_SOURCE}} deposit account opening integration.
+**Goal**: Build LWC-based screens and supporting backend infrastructure to guide Salesforce users through the complete deposit account opening process.
 
 **Outcomes (Phase 1)**:
-- Ingest {{INTEGRATION_SOURCE}} data to create/update Accounts, ApplicationForm, Applicant, Due_Diligence__c and FinServ__FinancialAccount__c, Product2 records
-- Source of truth for mappings: `/docs/01-foundation/field-mappings.csv` (user maintained)
-- Source of truth for data model: `/docs/01-foundation/data-model.md`
-- Lifecycle: Account → ApplicationForm → Applicant → Product2 → Due_Diligence__c → FinServ__FinancialAccount__c
+- Create intuitive LWC screens for each step of the account opening process
+- Build Apex services to support the LWC workflows and business logic
+- Implement data validation, state management, and workflow navigation
+- Optional: Integrate with external applications for data ingestion
+- Lifecycle: Account Creation → Application Form → Applicant Details → Product Selection → Collateral Entry → Review & Submit → Account Funding
 
-**Why this order**: We need a reliable data foundation and mapping before automation, so teams can validate lifecycle tracking from application → funding.
+**Why this order**: We need user-friendly interfaces that guide users through the complex deposit account opening process, with robust backend services supporting the workflow.
 
 ---
 
@@ -256,8 +257,11 @@ Before starting any task, review these for current state:
 
 Use these prefixes in commits and documentation:
 
+- **LWC-** = Lightning Web Components (UI screens, workflows, user experience)
+- **SVC-** = Apex Services (business logic, validation, workflow management)
+- **FLOW-** = Screen Flow Logic (navigation, state management, user journey)
 - **DM-** = Data Model (objects/fields/ER updates)
-- **MAP-** = Mappings ({{INTEGRATION_SOURCE}}→SF field map & rules)
+- **MAP-** = Mappings (external→SF field map & rules)
 - **ING-** = Ingestion (parser, mapper, upsert services, tests)
 - **API-** = API Development (REST endpoints, authentication, integration)
 - **SEC-** = Security (FLS/CRUD, PII handling, permissions)
